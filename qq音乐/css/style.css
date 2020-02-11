@@ -1,0 +1,715 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;/*文字不可选中*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑 Light";
+}
+
+.container {
+    width: 1536px;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100%;
+    height: 60px;
+}
+
+.head .nav{
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.head .nav li{
+    color: rgba(255,255,255,0.5);
+}
+
+.logo{
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    background: url("../image/player_logo.png") no-repeat;
+    background-size: 100% 70%;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.set{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.set:hover{
+    color: rgba(255,255,255,1) !important;
+}
+
+.up{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.up:hover{
+    color: rgba(255,255,255,1) !important;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+}
+
+.banner .left {
+    width: 886px;
+    height: 600px;
+    float: left;
+    margin-left: 100px;
+}
+
+.func span{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.love{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(255,255,255,1);
+    opacity: 0.5;
+    margin-left: 50px;
+    position: relative;
+    padding-right: 40px;
+}
+
+.love i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/icon_sprite.png") no-repeat -60px 0;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
+
+.appendTo{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(255,255,255,1);
+    opacity: 0.5;
+    position: relative;
+    padding-right: 30px;
+}
+
+.appendTo i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/icon_sprite.png") no-repeat -20px 0;
+    position: absolute;
+    top: 12px;
+    left: 35px;
+}
+
+.download{
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(255,255,255,1);
+    opacity: 0.5;
+    position: relative;
+    padding-right: 30px;
+}
+
+.download  i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/icon_sprite.png") no-repeat -40px -219px;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
+
+.remove{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(255,255,255,1);
+    opacity: 0.5;
+    position: relative;
+    padding-right: 40px;
+}
+
+.remove  i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/icon_sprite.png") no-repeat -100px 0;
+    position: absolute;
+    top: 12px;
+    left: 45px;
+}
+
+.clear_list{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: right;
+    color: rgba(255,255,255,1);
+    opacity: 0.5;
+    position: relative;
+    padding-right: 20px;
+}
+
+.clear_list  i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/icon_sprite.png") no-repeat -40px -300px;
+    position: absolute;
+    top: 12px;
+    left: 30px;
+}
+
+.func_hover{
+    border: 1px solid rgba(255,255,255,1);
+    opacity: 1 ;
+}
+.func_i_hover{
+    filter:brightness(200%) !important;
+}
+
+.banner .left .list{
+    width: 730px;
+    height: 525px;
+    list-style: none;
+    margin-left: 50px;
+    overflow: auto;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+
+}
+.banner .left .list li{
+    position: relative;
+    height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    cursor: unset;
+    user-select: none;/*文字无法选择*/
+    color: rgba(254, 254, 254, 0.5);
+}
+
+.list_head{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.list_select{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    opacity: 0.5;
+}
+.list_select_check{
+    border: 1px solid #ffffff;
+    opacity: 1;
+}
+.list_select_icon{
+    background: url("../image/icon_sprite.png") -20px -200px !important;
+    opacity: 1!important;
+}
+
+.list_index{
+    display: inline-block;
+    position: absolute;
+    left: 60px;
+}
+
+.list_index_animate{
+    background: url("../image/wave.gif") no-repeat 0 center;
+    color: transparent;/*文字透明看不见*/
+    width: 10px;
+}
+
+.list_music{
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    left: 100px;
+    text-align: left;
+}
+
+.list_name{
+    display: inline-block;
+    position: absolute;
+    left: 500px;
+}
+
+.list_time{
+    display: inline-block;
+    position: absolute;
+    left: 650px;
+}
+
+.list_rem{
+    display: inline-block;
+    position: absolute;
+    left: 650px;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    background: url("../image/icon_list_menu.png") 0 -160px;
+}
+
+.music_list_f4{
+    list-style: none;
+    position: absolute;
+    height: 40px;
+    top: 10px;
+    left: 200px;
+    display: none;
+}
+
+.music_list_f4 li{
+    display: inline-block;
+    width: 40px !important;
+    height: 40px !important;
+    border-bottom: none !important;
+}
+
+.music_list_player{
+    background: url("../image/icon_list_menu.png") -80px 0;
+}
+.music_list_player_bg{
+    background: url("../image/icon_list_menu.png") -80px -200px!important;
+}
+.music_list_player_bg:hover{
+    background: url("../image/icon_list_menu.png") -120px -200px!important;
+}
+.music_list_player:hover{
+    background: url("../image/icon_list_menu.png") -120px 0;
+}
+.music_list_add{
+    background: url("../image/icon_list_menu.png") -80px -80px;
+}
+.music_list_add:hover{
+    background: url("../image/icon_list_menu.png") -120px -80px;
+}
+.music_list_download{
+    background: url("../image/icon_list_menu.png") -80px -120px;
+}
+.music_list_download:hover{
+    background: url("../image/icon_list_menu.png") -120px -120px;
+
+}
+.music_list_share{
+    background: url("../image/icon_list_menu.png") -80px -40px;
+}
+.music_list_share:hover{
+    background: url("../image/icon_list_menu.png") -120px -40px;
+}
+.list_rem:hover{
+    background: url("../image/icon_list_menu.png") -120px -160px;
+}
+
+.banner .right {
+    width: 550px;
+    height: 600px;
+    float: right;
+    position: relative;
+}
+
+.picture{
+    width: 250px;
+    height: 250px;
+    background: url("../file/source/AslongASLoveMe.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.picture_right{
+    display: inline-block;
+    position: absolute;
+    width: 280px;
+    height: 250px;
+    background: url("../image/album_cover_player.png") no-repeat;
+    background-size: 100% 100%;
+    top: 30px;
+    right: 145px;
+}
+
+.music_name_a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 300px;
+    color: rgba(255,255,255,0.7);
+    user-select: none;
+}
+
+.music_name_b{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.7);
+}
+
+.music_name_c{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.7);
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    margin: 40px auto;
+    cursor: grabbing;
+    overflow: hidden;
+}
+
+.music_word{
+    list-style: none;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+
+.music_word li{
+    font-weight: bold;
+padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.play_music{
+    width: 150px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+    left: 100px;
+}
+
+.up_music{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    background: url("../image/player.png") no-repeat 0 -28px;
+    opacity: 0.6;
+}
+.up_music:hover{
+   opacity: 1 ;
+}
+.stop_music{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../image/player.png");
+    position: absolute;
+    top: 35px;
+    left: 60px;
+    opacity: 0.6;
+}
+.toggleStop{
+    background: url("../image/player.png") -30px 0!important;
+}
+.stop_music:hover{
+    opacity: 1 ;
+}
+.high{
+    color:rgba(255,255,255,1)!important;
+}
+.down_music{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../image/player.png") 0 -50px;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    opacity: 0.6;
+}
+.down_music:hover{
+    opacity: 1 ;
+}
+.music_news{
+    width: 600px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 320px;
+    color: rgba(255,255,255,0.5);
+}
+
+.music_name{
+    text-align: center;
+}
+.music_name:hover{
+    color: rgba(255,255,255,1);
+}
+.music_music:hover{
+    color: rgba(255,255,255,1);
+}
+
+.music_time_current{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+.music_time_current:hover{
+    color: rgba(255,255,255,1);
+}
+.music_time_total{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    float: right;
+}
+.music_time_total:hover{
+    color: rgba(255,255,255,1);
+}
+.scrollbar{
+    display: inline-block;
+    width: 600px;
+    height: 3px;
+    background-color: #989b9c;
+    position: relative;
+    top: 55px;
+    left: 320px;
+    cursor: pointer;
+}
+
+.scrollbar_current{
+    opacity: 0.6;
+    width: 0px;
+    height: 3px;
+    background-color: #f3f8f9;
+    position: absolute;
+    display: inline-block;
+}
+
+.scroll_radius{
+    opacity: 0.7;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    cursor: pointer;
+}
+.scrollbar_hover{
+    opacity: 1!important;
+}
+.more_select{
+    list-style: none;
+    display: inline-block;
+    width: 350px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    right: 240px;
+}
+
+.model_select{
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /*background: url("../image/player.png") 0 -205px;*/
+    opacity: 0.6;
+}
+.model_select_bg{
+    background: url("../image/player.png") 0 -205px;
+}
+.model_select_bg1{
+    background: url("../image/player.png") 0 -232px !important;
+}
+.model_select_bg2{
+    height: 21px;
+    background: url("../image/player.png") 0 -260px!important;
+}
+.model_select:hover{
+    opacity: 1;
+}
+.model_love{
+    opacity: 0.6;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    background: url("../image/player.png") 0 -95px;
+}
+.model_love_bg{
+    background: url("../image/player.png") -30px -95px;
+}
+.model_love:hover{
+    opacity: 1;
+}
+.model_download{
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    opacity: 0.6;
+    left: 140px;
+    background: url("../image/player.png") 0 -118px;
+}
+.model_download:hover{
+    opacity: 1;
+}
+.model_talk{
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    background: url("../image/player.png") 0 -398px;
+    opacity: 0.6;
+}
+.model_talk:hover{
+    opacity: 1;
+}
+.model_clear{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 260px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.model_clear_bg{
+    background: url("../image/player.png") 0 -280px;
+}
+.model_clear_bg1{
+    background: url("../image/player.png") 0 -310px !important;
+}
+.model_clear:hover{
+    opacity: 1!important;
+}
+.volume{
+    display: inline-block;
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    right: 50px;
+    top: 30px;
+    opacity: 0.6;
+}
+
+.volume:hover{
+    opacity: 1;
+}
+.volume_icon{
+    display: inline-block;
+    position: absolute;
+    /*background: url("../image/player.png") 0 -180px;*/
+    background: url("../image/player.png") 0 -145px;
+    top: 25px;
+    width: 40px;
+    height: 20px;
+}
+.volume_icon:hover{
+    opacity: 1;
+}
+
+.volume_bg{
+    width: 80px;
+    height: 2px;
+    background-color: #d7ddde;
+    position: absolute;
+    top: 32px;
+    left: 30px;
+    cursor:pointer !important;
+}
+
+.volume_radius{
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    top: 26px;
+    left: 100px;
+    cursor: pointer;
+}
+.mask_mask {
+    width: 1536px;
+    height: 800px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.mask{
+    width: 1536px;
+    height: 600px;
+    background: url("../file/source/AslongASLoveMe.jpg") no-repeat 50% center;
+    background-size: 100% 100%;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    filter: blur(60px);
+}
+.opacity_one{
+    opacity: 1!important;
+}
+.volume_off{
+    background: url("../image/player.png") 0 -183px;
+}
+.changeGreen{
+    color: #5ab800;!important;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music</title>
+    <link href="../jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="../image/sup.ico" rel="icon">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="../jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/player.js"></script>
+    <script src="../js/qqindex.js"></script>
+</head>
+<body>
+    <!-- 
+    写在前面：未完成功能：1，当前音乐播放结束自动换下一曲，（判断音乐播放时间，到了自动触发下一曲按钮）
+    2，在当前播放音乐点击了右下角喜欢等功能按钮，在换歌曲的时候应当切换至最初状态（当音乐换了的时候，将按钮上点击添加的样式清空）
+    3，点击选择框统一删除功能未完善（当前没有播放的隐喻还好）
+    4，托动进度条有小瑕疵（主要是妥当小球的宽度和拖动背景没有设置好只是看上去还可以）
+    5，循环播放功能未作（判断音乐播放时间，结束，再来）
+    6，随机播放未作（随机数选择随机音乐触发播放按钮）
+    7，纯净模式未作（界面只留歌词放到界面中间，变大）
+    8，歌词同步不完善（小瑕疵）
+    9，歌词拖动（小难）
+    日后再完善吧！ 希望下次看见这注释的你，已经不屑于做完这几个小功能了，看这些代码感觉如此粗鄙不堪，怀疑自己当初是怎么写出这种网页的。加油
+     -->
+<div class="container">
+    <div class="head">
+        <ul class="nav">
+            <li class="logo"></li>
+            <li class="set">设置</li>
+            <li class="up">登录</li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <div class="left">
+            <div class="func">
+                <span class="love"><i></i>收藏</span>
+                <span class="appendTo"><i></i>添加到</span>
+                <span class="download"><i></i>下载到</span>
+                <span class="remove"><i></i>删除</span>
+                <span class="clear_list"><i></i>清空列表</span>
+            </div>
+
+            <ul class="list" data-mcs-theme="minimal-dark">
+                <li class="list_head">
+                    <span class="list_select first"></span>
+                    <span class="list_index"></span>
+                    <span class="list_music">歌曲</span>
+                    <span class="list_name">歌手</span>
+                    <span class="list_time">时长</span>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <span class="picture_right"><div class="picture"></div></span>
+
+            <a class="music_name_a" href="#"><span>歌曲名:</span><span>As long AS Love Me</span></a>
+            <a class="music_name_b" href="#"><span>歌手名:</span><span>Justin Bieber</span></a>
+            <a class="music_name_c" href="#"><span>专辑名:</span><span>NOW That's What I Call Music! 44）</span></a>
+            <div class="box">
+                <ul class="music_word">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="play_music">
+            <span class="up_music"></span>
+            <span class="stop_music"></span>
+            <span class="down_music"></span>
+        </div>
+
+        <div class="music_news">
+            <span class="music_name">As long AS Love Me-</span>
+            <span class="music_music">Justin Bieber</span>
+            <span class="music_time_total">03:49</span>
+            <span class="music_time_current">00:00/</span>
+        </div>
+
+        <div class="scrollbar">
+            <div class="scrollbar_current"></div>
+            <div class="scroll_radius"></div>
+        </div>
+
+        <ul class="more_select">
+            <li class="model_select model_select_bg"></li>
+            <li class="model_love"></li>
+            <li class="model_download"></li>
+            <li class="model_talk"></li>
+            <li class="model_clear model_clear_bg"></li>
+        </ul>
+
+        <div class="volume">
+            <span class="volume_icon"></span>
+            <div class="volume_bg"></div>
+            <div class="volume_radius"></div>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="mask_mask"></div>
+</div>
+<audio></audio>
+</body>
+</html>
